@@ -178,9 +178,9 @@ def main():
                 st.write("**Rating:** ", random_recipe['Rating'])
                 if random_recipe['Description'] != "Description not found":
                     st.write("**Description:** ", random_recipe['Description'])
-                st.write("**Ingredients:** ", random_recipe['Ingredients'])
-                st.write("**Recipe Facts:** ", random_recipe['Recipe Facts'])
-                st.write("**Directions:** ", random_recipe['Directions'])                   
+                st.write("**Ingredients:**<br>", random_recipe['Ingredients'].replace('\n', '<br>'), unsafe_allow_html=True)
+                st.write("**Recipe Facts:**<br>", random_recipe['Recipe Facts'].replace('\n', '<br>'), unsafe_allow_html=True)
+                st.write("**Directions:**<br>", random_recipe['Directions'].replace('\n', '<br>'), unsafe_allow_html=True)                  
                 # extract only numeric values and convert mg to g
                 values = [
                     float(re.sub(r'[^\d.]+', '', random_recipe['Total Fat'])), 
@@ -340,9 +340,9 @@ def main():
                 st.write("**Rating:** ", response_json[0]['Rating'])
                 if response_json[0]['Description'] != "Description not found":
                     st.write("**Description:** ", response_json[0]['Description'])
-                st.write("**Ingredients:** ", response_json[0]['Ingredients'])
-                st.write("**Recipe Facts:** ", response_json[0]['Recipe Facts'])
-                st.write("**Directions:** ", response_json[0]['Directions']) 
+                st.write("**Ingredients:**<br>", response_json[0]['Ingredients'].replace('\n', '<br>'), unsafe_allow_html=True)
+                st.write("**Recipe Facts:**<br>", response_json[0]['Recipe Facts'].replace('\n', '<br>'), unsafe_allow_html=True)
+                st.write("**Directions:**<br>", response_json[0]['Directions'].replace('\n', '<br>'), unsafe_allow_html=True) 
                 # extract only numeric values and convert mg to g
                 values = [
                     float(re.sub(r'[^\d.]+', '', response_json[0]['Total Fat'])), 
