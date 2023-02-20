@@ -6,31 +6,49 @@ import re
 
 def main():
     st.title("Meal Planner")
-    st.markdown("The Meal Planner app helps users plan a meal with three recipes that fit their dietary needs, cuisine preferences, and calorie limits. After submitting their choices, the app retrieves recipe options from an API and randomly selects one recipe from each of the following categories: breakfast, lunch, and dinner. The app also displays the selected recipes' nutrition information and calculates the total nutrition of all three recipes combined.")  
+    st.markdown("The Meal Planner app helps users plan a meal with three recipes that fit their dietary needs, cuisine preferences, specific ingredients, and calorie limits. After submitting their choices, the app retrieves recipe options from an API and randomly selects one recipe from each of the following categories: breakfast, lunch, and dinner. The app also displays the selected recipes' nutrition information and calculates the total nutrition of all three recipes combined.")
+    
     # Dropdown for Diet
-    diet_options = ['Egg', 'Gluten-Free', 'Vegan', 'Vegetarian', 'Dairy-Free']
+    diet_options = ['All', 'Gluten-Free', 'Vegan', 'Vegetarian', 'Dairy-Free']
     diet = st.selectbox('Diet', diet_options)
 
     # Dropdown for Cuisine
     cuisine_options = ['All', 'African', 'Asian', 'Caribbean', 'Central American', 'Europe', 'Middle Eastern', 'North American', 'Oceanic', 'South American']
     cuisine = st.selectbox('Cuisine', cuisine_options)
 
+    # Text input for ingredients
+    ingredients = st.text_input("Enter ingredients (Separated By Commas)", placeholder="Enter Atleast One Ingredient", value="")    
+
     # Slider for Calories
     calories = st.slider("Select Max Calories for All Three Recipes", 25, 2500, 1500)
     st.write("Selected: **{}** Max Calories.".format(calories))
+    
+    # Submit button
     if st.button("Submit"):
+        if not ingredients:  # Check if ingredients text input field is empty
+            st.error("Please enter at least one ingredient.")
+            return
         url = "https://alcksyjrmd.execute-api.us-east-2.amazonaws.com/default/nutrients_response"
 
         params = {"k": str(calories)}
 
         if diet != "All":
-            params["f"] = diet
+            params["d"] = diet
 
         if cuisine != "All":
             params["c"] = cuisine
 
+        if ingredients:
+            params["i"] = ingredients
+
         response = requests.get(url, params=params)
+        if len(response.content) < 180:
+            st.error("The query was too large, please decrease the calories or fine-tune your search.")
+            return
         response_json = json.loads(response.content)
+
+
+        
 
         # Convert response_json to a list
         response_json = list(response_json)
@@ -53,7 +71,6 @@ def main():
                 st.write("**Total Fat:** ", random_recipe['Total Fat'])
                 st.write("**Total Carbohydrate:** ", random_recipe['Total Carbohydrate'])
                 st.write("**Protein:** ", random_recipe['Protein'])
-                st.write("**Course Keywords:** ", random_recipe['Course Keywords'])
                 if random_recipe['Image Link'].endswith(".jpg") or random_recipe['Image Link'].endswith(".jpeg") or random_recipe['Image Link'].endswith(".png"):
                     st.image(random_recipe['Image Link'], width=300)
                 else:
@@ -63,7 +80,7 @@ def main():
 
         # Brunch Section
         st.markdown("## Lunch Recipe")
-        brunch_recipes = [recipe for recipe in response_json if "brunch" in recipe['Course Keywords']]
+        brunch_recipes = [recipe for recipe in response_json if "main" in recipe['Course Keywords']]
         if len(brunch_recipes) > 0:
             random_recipe = random.choice(brunch_recipes)
             recipe_calories = random_recipe['Calories']
@@ -75,7 +92,6 @@ def main():
                 st.write("**Total Fat:** ", random_recipe['Total Fat'])
                 st.write("**Total Carbohydrate:** ", random_recipe['Total Carbohydrate'])
                 st.write("**Protein:** ", random_recipe['Protein'])
-                st.write("**Course Keywords:** ", random_recipe['Course Keywords'])
                 if random_recipe['Image Link'].endswith(".jpg") or random_recipe['Image Link'].endswith(".jpeg") or random_recipe['Image Link'].endswith(".png"):
                     st.image(random_recipe['Image Link'], width=300)
                 else:
@@ -97,7 +113,6 @@ def main():
                 st.write("**Total Fat:** ", random_recipe['Total Fat'])
                 st.write("**Total Carbohydrate:** ", random_recipe['Total Carbohydrate'])
                 st.write("**Protein:** ", random_recipe['Protein'])
-                st.write("**Course Keywords:** ", random_recipe['Course Keywords'])
                 if random_recipe['Image Link'].endswith(".jpg") or random_recipe['Image Link'].endswith(".jpeg") or random_recipe['Image Link'].endswith(".png"):
                     st.image(random_recipe['Image Link'], width=300)
                 else:
