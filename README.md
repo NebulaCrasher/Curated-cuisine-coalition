@@ -11,7 +11,7 @@ Click [Here](https://huggingface.co/spaces/Kaludi/Food-Category-Classification-A
 
 ![Project 3 (2)](https://user-images.githubusercontent.com/111074755/220503596-36f2d9b6-4459-4c22-a037-fea40a98c855.png)
 
-## Web Scarping:
+## Web Scraping:
 
 The website used is https://www.seriouseats.com/, and the data obtained as follows:
 
@@ -25,6 +25,10 @@ The website used is https://www.seriouseats.com/, and the data obtained as follo
 - Nutrition 
 - Images of the recipes 
 - Tags to categized food 
+
+## Image Scraping:
+
+Scraped the images of 12 popular food categories for the image classification model using a software called Bulk Image Downloader from Google Images
 
 ![Blank diagram (1)](https://user-images.githubusercontent.com/111074755/220501181-f60d9cab-5932-4c8d-b7fe-7e5eafbe3c4d.png)
 
