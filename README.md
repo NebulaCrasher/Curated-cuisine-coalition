@@ -50,10 +50,30 @@ AWS Lambda and AWS API Gateway were used to interact with the front end accrodin
 ## The user interface 
 
 - Plotly was used to create a pychart for the recipe nutritions. For the recipe nutritions, they were all converted to grams. 
-- Streamlit was used for the user interface UI, which included everything from the drop downs of the diet and cuisine to work with the fin tuned images classifier model
+- Streamlit was used for the user interface UI, which included everything from the drop downs of the diet and cuisine to work with the fine tuned images classifier model
 
 ## Interface Hosting
 
 Hugging Face Spaces was used to host our final trained model as well as our web interface code.
 
+## Requirements
+
+-   Python 3.6 or higher
+-   Streamlit
+-   Requests
+-   plotly
+
+## Installation
+
+1.  Clone the repository:
+
+`git clone https://github.com/NebulaCrasher/curated-cuisine-coalition.git` 
+
+2.  Install the required packages:
+
+`pip install streamlit requests` 
+
+3.  Run the app:
+
+`streamlit run Classification_And_Recipes.py`
 
