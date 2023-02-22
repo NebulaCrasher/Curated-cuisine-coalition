@@ -2,6 +2,10 @@
 
 This app uses a Food Category Image Classifier model that has been trained by to recognize 12 different categories of foods, which includes Bread, Dairy, Dessert, Egg, Fried Food, Fruit, Meat, Noodles, Rice, Seafood, Soup, and Vegetable. After classifying the category, it provides a personalized recipe recommendations based on user preferences for diet and cuisine. With its easy-to-use interface and integration with recipe databases, the app is perfect for food lovers looking for personalized recipe suggestions.
 
+# Web App
+Click [Here](https://huggingface.co/spaces/Kaludi/Food-Category-Classification-And-Recipes-Recommender_App "Here") To View This App Online!
+
+![Image](https://user-images.githubusercontent.com/63890666/220527352-d0c91d29-e0de-4e0d-9b68-dfaa00b4b6e4.png)
 
 # Architecture
 
