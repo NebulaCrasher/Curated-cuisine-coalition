@@ -63,7 +63,7 @@ Hugging Face Spaces was used to host our final trained model as well as our web 
 -   Requests
 -   plotly
 
-## Installation
+## Installation (To Run Locally)
 
 1.  Clone the repository:
 
