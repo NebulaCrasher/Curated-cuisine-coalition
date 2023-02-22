@@ -29,7 +29,7 @@ The website used is https://www.seriouseats.com/, and the data obtained as follo
 - Web scraped data cleaned and tranformed in Python using Pandas. 
 - Training the food images scraped off Google 
 - 1500 total images were downloaded for 12 different categories
-- 75% of the images were used to train, and the other 25% were used to validate
+- 80% of the images were used to train, and the other 20% were used to validate
 
 ## Loading
 
