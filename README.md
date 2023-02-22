@@ -22,6 +22,9 @@ The website used is https://www.seriouseats.com/, and the data obtained as follo
 - Images of the recipes 
 - Tags to categized food 
 
+![Blank diagram (1)](https://user-images.githubusercontent.com/111074755/220501181-f60d9cab-5932-4c8d-b7fe-7e5eafbe3c4d.png)
+
+
 
 
 
