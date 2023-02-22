@@ -17,25 +17,14 @@ st.set_page_config(layout='wide',
                    page_title='Food Category Classification & Recipes Recommender'
                    )
 
-# Setting up Sidebar
-sidebar_acc = ['App Description', 'About Project']
-sidebar_acc_nav = st.sidebar.radio('**INFORMATION SECTION**', sidebar_acc)
-
-if sidebar_acc_nav == 'App Description':
-    st.sidebar.markdown("<h2 style='text-align: center;'> Food Category Classification Description </h2> ", unsafe_allow_html=True)
-    st.sidebar.markdown("This app is using a Food Category Image Classifier model that has been trained by [Kaludi](https://huggingface.co/Kaludi) to recognize **12** different categories of foods, which includes **Bread**, **Dairy**, **Dessert**, **Egg**, **Fried Food**, **Fruit**, **Meat**, **Noodles**, **Rice**, **Seafood**, **Soup**, and **Vegetable**. After classifying the category, it provides a personalized recipe recommendations based on user preferences for diet and cuisine. With its easy-to-use interface and integration with recipe databases, the app is perfect for food lovers looking for personalized recipe suggestions.")
-
-elif sidebar_acc_nav == 'About Project':
-    st.sidebar.markdown("<h2 style='text-align: center;'> About Project </h2>", unsafe_allow_html=True)
-    st.sidebar.markdown("<hr style='text-align: center;'>", unsafe_allow_html=True)
-    st.sidebar.markdown("<h3 style='text-align: center;'>Project Location:</h3>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><strong><a href='https://huggingface.co/Kaludi/food-category-classification-v2.0'>Model</a></strong>  |  <strong><a href='https://huggingface.co/datasets/Kaludi/food-category-classification-v2.0'>Dataset</a></strong></p>", unsafe_allow_html=True)
-    st.sidebar.markdown("<hr style='text-align: center;'>", unsafe_allow_html=True)
-    st.sidebar.markdown("<h3 style='text-align: center;'>Project Creators:</h3>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Kaludii'><strong>AA</strong></a></p>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Kaludii'><strong>AM</strong></a></p>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Kaludii'><strong>BK</strong></a></p>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Kaludii'><strong>DK</strong></a></p>", unsafe_allow_html=True)
+st.sidebar.markdown("<h3 style='text-align: center;'>Project Location:</h3>", unsafe_allow_html=True)
+st.sidebar.markdown("<p style='text-align: center;'><strong><a href='https://huggingface.co/Kaludi/food-category-classification-v2.0'>Model</a></strong>  |  <strong><a href='https://huggingface.co/datasets/Kaludi/food-category-classification-v2.0'>Dataset</a></strong>  |  <strong><a href='https://github.com/NebulaCrasher/curated-cuisine-coalition'>GitHub</a></strong></p>", unsafe_allow_html=True)
+st.sidebar.markdown("<hr style='text-align: center;'>", unsafe_allow_html=True)
+st.sidebar.markdown("<h3 style='text-align: center;'>Project Creators:</h3>", unsafe_allow_html=True)
+st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Alhamzahalabboodi'><strong>Alhamzah Alabboodi</strong></a></p>", unsafe_allow_html=True)
+st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/amoonguaklang12'><strong>Anderson Moonguaklang</strong></a></p>", unsafe_allow_html=True)
+st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/Kaludii'><strong>Bilal Kaludi</strong></a></p>", unsafe_allow_html=True)
+st.sidebar.markdown("<p style='text-align: center;'><a href='https://github.com/NebulaCrasher'><strong>Davit Ksor</strong></a></p>", unsafe_allow_html=True)
     
 
 def main():
