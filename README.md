@@ -77,4 +77,4 @@ Hugging Face Spaces was used to host our final trained model as well as our web 
 
 `streamlit run Classification_And_Recipes.py`
 
-#We hope you enjoy using our app and discover new recipes that you love!
+# We hope you enjoy using our app and discover new recipes that you love!
