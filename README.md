@@ -5,7 +5,7 @@ This app uses a Food Category Image Classifier model that has been trained by to
 
 # Architecture
 
-![Project 3 (1)](https://user-images.githubusercontent.com/111074755/220497912-39096b71-ca59-46f7-8074-c6b5bd7e1a78.png)
+![Project 3 (2)](https://user-images.githubusercontent.com/111074755/220503596-36f2d9b6-4459-4c22-a037-fea40a98c855.png)
 
 ## Web Scarping:
 
@@ -24,7 +24,28 @@ The website used is https://www.seriouseats.com/, and the data obtained as follo
 
 ![Blank diagram (1)](https://user-images.githubusercontent.com/111074755/220501181-f60d9cab-5932-4c8d-b7fe-7e5eafbe3c4d.png)
 
+## Tranformation
 
+- Web scraped data cleaned and tranformed in Python using Pandas. 
+- Training the food images scraped off Google 
+- 1500 total images were downloaded for 12 different categories
+- 75% of the images were used to train, and the other 25% were used to validate
 
+## Loading
+
+AWS S3 bucket was used to load the scraped data in JSON format
+
+## The back end
+
+AWS Lambda and AWS API Gateway were used to interact with the front end accroding to the users criteria in the front end.
+
+## The user interface 
+
+- Plotly was used to create a pychart for the recipe nutritions. For the recipe nutritions, they were all converted to grams. 
+- Streamlit was used for the user interface UI, which included everything from the drop downs of the diet and cuisine to work with the fin tuned images classifier model
+
+## Interface Hosting
+
+Hugging Face Spaces was used to host our final trained model as well as our web interface code.
 
 
