@@ -56,6 +56,10 @@ AWS Lambda and AWS API Gateway were used to interact with the front end accrodin
 
 Hugging Face Spaces was used to host our final trained model as well as our web interface code.
 
+## Usage
+
+To use our app, simply click on [this link](https://huggingface.co/spaces/Kaludi/Food-Category-Classification-And-Recipes-Recommender_App) to access the web app. Once you're on the app, select your preferences for diet and cuisine from the drop-down menus, and click the "Get Recipe" button. Our image classification model will identify the food category and provide personalized recipe recommendations based on your preferences. You can also view recipe details, ratings, nutrition facts, and more.
+
 ## Requirements
 
 -   Python 3.6 or higher
