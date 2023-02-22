@@ -1,0 +1,11 @@
+main.ipynb was ran to scrape recipe information based off of URLs from SeriousEatsCSV.csv.
+
+This produced: recipes.csv and recipes.json.
+
+Due to error in image scraping, imagegrabber.ipynb was used on recipes(wrongimageurls).csv
+
+This produced: filtered_recipes.csv
+
+Because we wanted to reformat our data set, we made formatter.ipynb to do so.
+
+This produced: final_recipes.csv and rewrote recipes.json
