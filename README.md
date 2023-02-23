@@ -49,12 +49,27 @@ AWS Lambda and AWS API Gateway were used to interact with the front end accrodin
 
 ## The user interface 
 
-- Plotly was used to create a pychart for the recipe nutritions. For the recipe nutritions, they were all converted to grams. 
 - Streamlit was used for the user interface UI, which included everything from the drop downs of the diet and cuisine to work with the fine tuned images classifier model
 
 ## Interface Hosting
 
 Hugging Face Spaces was used to host our final trained model as well as our web interface code.
+
+## Image Classification Model Metrics
+
+| Metric             | Score |
+| ------------------ | ----- |
+| Accuracy           | 96%   |
+| Loss               | 0.1443|
+| Precision_macro    | 0.9621|
+| Precision_micro    | 0.96  |
+| Precision_weighted | 0.9621|
+| Recall_macro       | 0.96  |
+| Recall_micro       | 0.96  |
+| Recall_weighted    | 0.96  |
+| F1_macro           | 0.9595|
+| F1_micro           | 0.96  |
+| F1_weighted        | 0.9595|
 
 ## Usage
 
