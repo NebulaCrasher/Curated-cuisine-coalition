@@ -1,3 +1,5 @@
+# Curated Cuisine Coalition
+
 # Are you a food lover always looking for new recipe ideas?
 
 This app uses a Food Category Image Classifier model that has been trained to recognize 12 different categories of foods: Bread, Dairy, Dessert, Egg, Fried Food, Fruit, Meat, Noodles, Rice, Seafood, Soup, and Vegetable. After classifying the category, it provides personalized recipe recommendations based on user preferences for diet and cuisine. With its easy-to-use interface and integration with recipe databases, the app is perfect for food lovers looking for personalized recipe suggestions.
