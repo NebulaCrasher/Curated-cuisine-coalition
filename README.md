@@ -34,7 +34,7 @@ Scraped the images of the 12 food categories for the image classification model 
 
 ## Transformation
 
-- Data cleaning and formatting was done in Python using Pandas/
+- Data cleaning and formatting was done in Python using Pandas.
 - The AI was then trained with food images from Google.
 - 1500 total images were downloaded across the 12 different categories.
 - 80% of the images were used for training and the other 20% were used for testing/validation.
